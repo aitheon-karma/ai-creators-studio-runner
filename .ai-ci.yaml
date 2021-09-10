@@ -1,0 +1,10 @@
+---
+version: 1.0.0-alpha.2
+internal:
+  stages:
+  - master
+  - beta
+  pushImage: true
+  actions:
+    postBuild:
+    - BUILD_SERVER.BuildsService.updateRunnerImage
